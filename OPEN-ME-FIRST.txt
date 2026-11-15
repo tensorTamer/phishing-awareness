@@ -1,0 +1,17 @@
+HOW TO OPEN THIS ASSIGNMENT
+---------------------------
+This is an interactive phishing-awareness website (Assignment 5A, Option A,
+presented as an interactive website).
+
+To view it:
+  1. Unzip this folder (if you haven't already).
+  2. Double-click "index.html" - it opens in any web browser.
+
+No internet connection is required; everything (including Bootstrap) is included
+in the "assets" folder. Click through the warning signs, try the "Spot the Phish"
+simulator, the password tools, the MFA demo, and the quiz.
+
+The 2-page design explanation is in the separate file "5A Design Explanation.docx".
+
+Submitted by: Adwaith Jayaraj (Holland College)
+CNET-2060 Foundations of Cyber-Security - Module 5, Assignment 5A

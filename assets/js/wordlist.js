@@ -1,0 +1,12 @@
+/* Common, easy-to-remember words (4-6 letters) for the passphrase generator. app.js de-duplicates and measures it. */
+window.PHISH_WORDS = ("acorn adult agent alarm album alert alley amber anchor angle ankle apple april apron arena armor arrow aroma attic autumn avenue " +
+"bacon badge bagel baker banjo barn basil basin beach beard beaver bench berry bike birch bison blade blank blast blaze blend bloom boat bonus boots bottle boxer brain brave bread brick bride bridge brook broom brush bucket bugle " +
+"cabin cable cactus camel canal candy canoe canyon cargo carpet carrot castle cedar cellar chair chalk cheese cherry chess chest chief child chime cider circle civic clay clerk cliff clock cloud clover coach coast cobra cocoa coffee comet coral corn cotton couch coyote crane crayon creek crown crumb crystal cube curry " +
+"daisy dance date delta denim desert diary diner dingo dock dolphin donut dragon drift drum duck eagle earth easel echo elbow elder elm ember engine envoy " +
+"fable fairy falcon farm fawn feast fence ferry fiddle field finch fjord flame flask fleet flint flute focus forest fossil fox frost fruit " +
+"galaxy garden garlic gecko giant ginger glacier globe glove goat gold goose grape grass gravel grove guitar gull habit hammer harbor harp hawk hazel heart hedge heron hill honey horse hotel house hunter " +
+"igloo inlet iris island ivory jacket jaguar jelly jewel jigsaw jungle kayak kettle kite kiwi knight koala label ladder lagoon lake lamp lance lantern lark laser lemon lilac linen lion lizard llama lobby lotus lunar lynx " +
+"magnet maple marble marsh meadow melon mint mirror mitten mocha monkey moose moss motor mouse muffin mural nacho navy nectar nest night noble noodle north novel nutmeg " +
+"oasis ocean olive onion opera orange orbit orchid otter oven owl oyster paddle palace panda paper parrot peach pearl pebble pecan pencil pepper piano picnic pigeon pilot pine pixel planet plum polar pond poppy porch prism pumpkin puzzle " +
+"quail quartz queen quilt rabbit radar radio raven reef ribbon ridge river robin rocket rose ruby saddle sage sailor salad salmon sandal scarf shell shore silver skate sled smile snail snow solar spark spice spider spoon squid stable star stone storm sugar summer swan sweet " +
+"table tango teapot tent thistle tiger timber toast tomato tower trail train tulip tunnel turtle umbrella valley velvet violet violin walnut walrus water whale wheat willow window winter wolf wombat yacht yarn zebra zinc").split(" ");

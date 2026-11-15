@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Think Before You Click — Phishing Awareness</title>
+<meta name="description" content="An interactive 5-minute guide to spotting, stopping and reporting phishing: warning signs, a phishing simulator, password lab, MFA and a quiz." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+<a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-navy d-flex align-items-center" href="#top"><span class="logo" aria-hidden="true">🛡️</span>Think&nbsp;Before&nbsp;You&nbsp;Click</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#signs">Warning Signs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#spot">Spot the Phish</a></li>
+        <li class="nav-item"><a class="nav-link" href="#passwords">Passwords</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mfa">MFA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#report">Report</a></li>
+        <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<a id="top"></a>
+<main id="main">
+<!-- HERO -->
+<header class="hero py-5">
+  <div class="container py-4">
+    <span class="eyebrow eyebrow-dark">Security Awareness Campaign</span>
+    <h1 class="display-4 fw-bold text-white mb-3">One click can cost a company everything.</h1>
+    <p class="fs-5 mb-4 hero-lead">Phishing is one of the most common ways attackers break into organizations — and it works by fooling people, not machines. This 5-minute interactive guide shows you how to spot it, stop it, and report it. No technical background needed.</p>
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-brand btn-lg" href="#spot"><span aria-hidden="true">▶</span> Try the phishing simulator</a>
+      <a class="btn btn-outline-light-brand btn-lg" href="#signs">See the warning signs</a>
+    </div>
+    <div class="row g-3 mt-4">
+      <div class="col-md-4"><div class="card stat-card text-white h-100"><div class="card-body"><div class="n">68%</div><div class="small text-white-50">of breaches involve a human element, such as phishing or a mistake (Verizon DBIR 2024)</div></div></div></div>
+      <div class="col-md-4"><div class="card stat-card text-white h-100"><div class="card-body"><div class="n">~21s</div><div class="small text-white-50">median time for a user to click a phishing link once the email is open — plus ~28s to enter data (Verizon DBIR 2024)</div></div></div></div>
+      <div class="col-md-4"><div class="card stat-card text-white h-100"><div class="card-body"><div class="n">$4.8M</div><div class="small text-white-50">average cost of a breach that started with phishing, the most common entry route in 2025 (IBM Cost of a Data Breach 2025)</div></div></div></div>
+    </div>
+    <p class="small mt-3 mb-0 hero-note">Figures are from the reports named above; see <a class="link-light" href="#sources">Sources</a>. They change each year.</p>
+  </div>
+</header>
+
+<!-- WARNING SIGNS -->
+<section id="signs" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 1</span>
+    <h2 class="fw-bold text-navy">The 6 warning signs of a phishing email</h2>
+    <p class="fs-5 lead-muted">Most phishing emails give themselves away. Open each one to learn what to look for — with a real-world example.</p>
+    <div class="accordion mt-4" id="signsAcc">
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s1" data-bs-target="#s1"><span class="sign-ic" aria-hidden="true">🎣</span><span><b>Urgency &amp; threats</b> — “Act now or else…”</span></button></h3>
+        <div id="s1" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">Attackers create panic so you act before you think — warnings that your account will be closed, a payment failed, or you'll face a penalty.<div class="ex-code">⚠ “Your account will be suspended in 24 hours unless you verify immediately.”</div></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s2" data-bs-target="#s2"><span class="sign-ic" aria-hidden="true">🌐</span><span><b>Look-alike sender</b> — check the real address</span></button></h3>
+        <div id="s2" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">The display name looks legit, but the actual domain is subtly wrong — a swapped letter, extra word, or public email service.<div class="ex-code">From: IT Support &lt;support@micros0ft-helpdesk.com&gt;  ← zero instead of “o”</div></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s3" data-bs-target="#s3"><span class="sign-ic" aria-hidden="true">🔗</span><span><b>Suspicious links</b> — hover before you click</span></button></h3>
+        <div id="s3" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">The visible text and the real destination don't match. Hover (or long-press) to preview the true URL before clicking anything.<div class="ex-code">Text says: office365.com → real link: http://0ffice-verify.ru/login</div></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s4" data-bs-target="#s4"><span class="sign-ic" aria-hidden="true">👋</span><span><b>Generic greeting</b> — “Dear valued user”</span></button></h3>
+        <div id="s4" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">Mass phishing can't use your name. Real companies you deal with usually address you personally and reference specific details.<div class="ex-code">“Dear Customer,” / “Dear User,” instead of your actual name</div></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s5" data-bs-target="#s5"><span class="sign-ic" aria-hidden="true">📎</span><span><b>Unexpected attachments</b> — especially .html / .zip</span></button></h3>
+        <div id="s5" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">Attachments you weren't expecting — invoices, scans, “secure documents” — can carry malware or open fake login pages.<div class="ex-code">📎 Invoice_scan.html · Payment_Details.zip</div></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="s6" data-bs-target="#s6"><span class="sign-ic" aria-hidden="true">🔑</span><span><b>Asks for credentials</b> — no one legit does this</span></button></h3>
+        <div id="s6" class="accordion-collapse collapse" data-bs-parent="#signsAcc"><div class="accordion-body text-muted">Legitimate IT and banks will never email you to “confirm your password,” MFA code, or full card number. That request is the attack.<div class="ex-code">“Reply with your username and password to keep your access active.”</div></div></div>
+      </div>
+    </div>
+    <h3 class="h4 text-navy mt-5">Phishing isn't only email</h3>
+    <div class="row g-3 mt-1">
+      <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><b>📱 Smishing (SMS)</b><div class="small text-muted">Fake delivery, bank or toll texts with a short link. Don't tap — open the real app or site yourself.</div></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><b>📞 Vishing (voice)</b><div class="small text-muted">A caller “from IT or your bank” creates urgency. Hang up and call back on a number you already trust.</div></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><b>🔳 QR phishing</b><div class="small text-muted">A QR code hides its link. Treat unexpected codes in emails, posters or parking meters like unknown links.</div></div></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><b>🤖 AI &amp; deepfakes</b><div class="small text-muted">AI writes flawless emails and can clone a voice or face. Typos are no longer a reliable clue — verify the request, not the polish.</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPOT THE PHISH -->
+<section id="spot" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 2 · Interactive</span>
+    <h2 class="fw-bold text-navy">Spot the phish</h2>
+    <p class="fs-5 lead-muted">Here's an email just like one that could land in your inbox. <b>Click every part you think is a red flag.</b> Find them all, then reveal the answers.</p>
+    <div class="card shadow-sm mt-4">
+      <ul class="nav nav-tabs card-header-tabs m-0 px-2 pt-2" role="tablist">
+        <li class="nav-item"><button class="nav-link active" id="tab0" role="tab" aria-selected="true" data-mail="0">✉️ “IT Help Desk” email</button></li>
+        <li class="nav-item"><button class="nav-link" id="tab1" role="tab" aria-selected="false" data-mail="1">💳 “CEO” gift-card text</button></li>
+      </ul>
+      <div class="row g-0">
+        <div class="col-lg-7 border-end p-4" id="emailPane" role="tabpanel" aria-labelledby="tab0"></div>
+        <div class="col-lg-5 p-4 bg-light">
+          <div class="fw-bold text-navy mb-1"><span id="cFound">0</span> of <span id="cTotal">6</span> red flags found</div>
+          <div class="progress progress-sm mb-3" role="progressbar" aria-label="Red flags found" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><div id="cBar" class="progress-bar bg-success"></div></div>
+          <ul class="list-group list-group-flush small" id="findings" aria-live="polite"></ul>
+          <div class="d-flex gap-2 mt-3">
+            <button class="btn btn-brand flex-fill" id="revealBtn">Reveal answers</button>
+            <button class="btn btn-outline-secondary" id="resetBtn">Reset</button>
+          </div>
+          <div class="alert alert-info small mt-3 mb-0 d-none" id="simMsg" role="status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSWORDS -->
+<section id="passwords" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 3 · Interactive</span>
+    <h2 class="fw-bold text-navy">Build a password attackers can't crack</h2>
+    <p class="fs-5 lead-muted">Phishing often succeeds because the stolen password was weak and reused. Length beats complexity. Everything below runs privately in your browser — nothing is sent anywhere.</p>
+    <div class="row g-3 mt-2">
+      <div class="col-lg-6">
+        <div class="card shadow-sm h-100"><div class="card-body">
+          <h3 class="h5 text-navy">🔍 Strength checker</h3>
+          <p class="small text-muted mb-2">Type a <b>sample</b> password (never your real one) to see how it holds up.</p>
+          <input id="pwInput" type="text" class="form-control mono-input mb-2" placeholder="try: Summer2024  vs  river-copper-lantern-7" autocomplete="off" spellcheck="false" />
+          <div class="progress progress-md mb-2" role="progressbar" aria-label="Password strength" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><div id="pwMeter" class="progress-bar"></div></div>
+          <div id="pwVerdict" class="fw-bold mt-1 text-muted" aria-live="polite">Waiting…</div>
+          <div id="pwCrack" class="small text-muted"></div>
+          <p class="small text-muted mt-2 mb-0" id="pwWhy"></p>
+        </div></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card shadow-sm h-100"><div class="card-body">
+          <h3 class="h5 text-navy">🎲 Passphrase generator</h3>
+          <p class="small text-muted mb-2">A random passphrase is easier to remember than random characters — its strength comes from how many truly random words it has.</p>
+          <div class="pp-out mb-2" id="ppOut">click generate →</div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-brand flex-fill" id="ppBtn">Generate passphrase</button>
+            <button class="btn btn-outline-secondary" id="ppCopy">Copy</button>
+          </div>
+          <div class="small text-muted mt-2" id="ppCrack" aria-live="polite"></div>
+          <p class="small text-muted mt-1 mb-0">Store unique passphrases in a <b>password manager</b> so you only remember one.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MFA -->
+<section id="mfa" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 4 · Interactive</span>
+    <h2 class="fw-bold text-navy">Why multi-factor authentication matters</h2>
+    <p class="fs-5 lead-muted">Even if an attacker steals your password, the right second factor stops them. Click each option to see what happens when a thief tries your stolen password.</p>
+    <div class="row g-3 mt-2">
+      <div class="col-md-4"><div class="card shadow-sm h-100 mfa-card text-center"><div class="card-body">
+        <div class="big" aria-hidden="true">🔑</div><h3 class="h5 text-navy mt-2">Password only</h3><p class="small text-muted">One secret protects everything.</p>
+        <div class="alert alert-danger small mt-2 mb-0 mfa-state d-none">❌ Breached — the stolen password is all they needed.</div></div></div></div>
+      <div class="col-md-4"><div class="card shadow-sm h-100 mfa-card text-center"><div class="card-body">
+        <div class="big" aria-hidden="true">📲</div><h3 class="h5 text-navy mt-2">Password + SMS / push</h3><p class="small text-muted">A code or “approve” prompt on your phone.</p>
+        <div class="alert alert-warning small mt-2 mb-0 mfa-state d-none">⚠️ Risky — codes can be phished and push prompts spammed until you tap “approve.”</div></div></div></div>
+      <div class="col-md-4"><div class="card shadow-sm h-100 mfa-card text-center"><div class="card-body">
+        <div class="big" aria-hidden="true">🔐</div><h3 class="h5 text-navy mt-2">Passkey / security key</h3><p class="small text-muted">Phishing-resistant (FIDO2).</p>
+        <div class="alert alert-success small mt-2 mb-0 mfa-state d-none">✅ Blocked — the key only works on the real site, so the attacker is stuck.</div></div></div></div>
+    </div>
+    <p class="small text-muted mt-3">Turn on MFA everywhere it's offered. Prefer an authenticator app or a passkey over SMS — and never approve a prompt you didn't start.</p>
+  </div>
+</section>
+
+<!-- REPORT -->
+<section id="report" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 5</span>
+    <h2 class="fw-bold text-navy">Think you've been phished? Report it.</h2>
+    <p class="fs-5 lead-muted">Reporting fast limits the damage — for you and everyone else. You will never be blamed for reporting, even if you clicked.</p>
+    <div class="row g-3 mt-1">
+      <div class="col-md-4"><div class="card h-100"><div class="card-body d-flex gap-3"><div class="step-num">1</div><div><b>Don't interact further.</b><div class="small text-muted">Don't click, reply, open attachments, or enter anything. Leave the email as-is.</div></div></div></div></div>
+      <div class="col-md-4"><div class="card h-100"><div class="card-body d-flex gap-3"><div class="step-num">2</div><div><b>Report it.</b><div class="small text-muted">Use the “Report Phish” button in your mail app, or forward to your IT / security team.</div></div></div></div></div>
+      <div class="col-md-4"><div class="card h-100"><div class="card-body d-flex gap-3"><div class="step-num">3</div><div><b>If you already clicked, say so.</b><div class="small text-muted">Tell IT immediately and change your password from a device you trust. Speed beats embarrassment.</div></div></div></div></div>
+    </div>
+    <div class="report-band rounded-4 p-4 mt-4 d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div><h3 class="h5 text-white mb-1">One-click reporting</h3><p class="mb-0 report-lead">Most organizations add a “Report Phishing” button to Outlook/Gmail. Know where yours is <em>before</em> you need it.</p></div>
+      <button class="btn btn-brand btn-lg" id="reportBtn">🚩 Report the sample phishing email</button>
+    </div>
+    <p class="small text-muted mt-3 d-none" id="reportMsg" role="status"></p>
+    <h3 class="h5 text-navy mt-4">Where to report (outside your workplace)</h3>
+    <ul class="small">
+      <li><b>At work:</b> use your mail app's “Report Phish” button or forward to your IT / security team.</li>
+      <li><b>Anti-Phishing Working Group:</b> forward phishing emails to <a href="mailto:reportphishing@apwg.org">reportphishing@apwg.org</a>.</li>
+      <li><b>US Federal Trade Commission:</b> <a href="https://reportfraud.ftc.gov" rel="noopener">reportfraud.ftc.gov</a>. Forward spam texts to <b>7726</b> (SPAM).</li>
+      <li><b>CISA:</b> <a href="https://www.cisa.gov/report" rel="noopener">cisa.gov/report</a> for incidents at organizations.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="section">
+  <div class="container">
+    <span class="eyebrow">Part 6 · Test yourself</span>
+    <h2 class="fw-bold text-navy">Knowledge check</h2>
+    <p class="fs-5 lead-muted">Six quick questions. Answer every one, then score yourself. Answer order is shuffled each try.</p>
+    <div class="card shadow-sm mt-3"><div class="card-body p-4" id="quizBox"></div></div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources" class="section">
+  <div class="container">
+    <h2 class="h4 fw-bold text-navy">Sources &amp; further reading</h2>
+    <ul class="small mb-0">
+      <li>Verizon, <i>2024 Data Breach Investigations Report</i> (human element; time-to-click).</li>
+      <li>IBM Security, <i>Cost of a Data Breach Report 2025</i> (cost by initial attack vector).</li>
+      <li>CISA, <a href="https://www.cisa.gov/secure-our-world/recognize-and-report-phishing" rel="noopener">Recognize and Report Phishing</a>.</li>
+      <li>FTC, <a href="https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" rel="noopener">How to Recognize and Avoid Phishing Scams</a>.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-5 text-center">
+  <div class="container">
+    <h3 class="h5 text-white">The 30-second takeaway</h3>
+    <p class="mx-auto mb-3 footer-lead"><b>Stop. Look. Report.</b> Slow down on anything urgent, check the sender and links, never hand over passwords or MFA codes, turn on strong MFA, and report anything suspicious. When in doubt, verify through a channel you trust — not the email.</p>
+    <p class="small mb-0 footer-note">Security Awareness Campaign · CNET-2060 Foundations of Cyber-Security · Module 5 · Assignment 5A (Option A — interactive website). Built with Bootstrap 5. Example emails, brands, and statistics are illustrative and for educational use.</p>
+  </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/pwlib.js"></script>
+<script src="assets/js/wordlist.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Think Before You Click — custom theme on top of Bootstrap 5 */
+:root{
+  --brand-navy:#1F2A44; --brand-teal:#2A9D8F; --brand-teal-d:#1f7d72;
+  --brand-amber:#E9A23B; --brand-red:#C8553D; --brand-green:#2f8f5b;
+  --bs-body-bg:#f5f7fb; --bs-body-color:#1b2430;
+  --bs-primary:#2A9D8F; --bs-primary-rgb:42,157,143;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.text-navy{color:var(--brand-navy)!important}
+.section{padding:66px 0;border-bottom:1px solid #e3e8f0}
+.eyebrow{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--brand-teal-d);background:#e6f4f1;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+.lead-muted{color:#5b6676;max-width:62ch}
+
+/* buttons */
+.btn-brand{background:var(--brand-teal);border-color:var(--brand-teal);color:#06231f;font-weight:700}
+.btn-brand:hover{background:var(--brand-teal-d);border-color:var(--brand-teal-d);color:#fff}
+.btn-outline-light-brand{border:1px solid rgba(255,255,255,.35);color:#fff;font-weight:700}
+.btn-outline-light-brand:hover{background:rgba(255,255,255,.12);color:#fff}
+
+/* navbar */
+.navbar-brand .logo{width:30px;height:30px;border-radius:8px;display:inline-grid;place-items:center;color:#fff;
+  background:linear-gradient(135deg,var(--brand-teal),var(--brand-navy));font-size:16px;margin-right:8px}
+.navbar .nav-link{font-weight:600;color:#5b6676}
+.navbar .nav-link:hover{color:var(--brand-navy)}
+
+/* hero */
+.hero{background:radial-gradient(1100px 380px at 80% -10%,rgba(42,157,143,.22),transparent 60%),
+  linear-gradient(160deg,#1b2740,#24324f 60%,#2b3a5c);background-color:var(--brand-navy);color:#eaf0f7}
+.hero .display-4{letter-spacing:-.02em}
+.stat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13)!important}
+.stat-card .n{font-size:1.9rem;font-weight:800;color:#fff}
+
+/* accordion brand */
+.accordion-button:not(.collapsed){color:var(--brand-navy);background:#e9f5f3;box-shadow:inset 0 -1px 0 rgba(0,0,0,.06)}
+.accordion-button:focus{box-shadow:0 0 0 .2rem rgba(42,157,143,.25)}
+.sign-ic{width:38px;height:38px;flex:0 0 auto;border-radius:10px;background:#fdf1e0;color:var(--brand-amber);
+  display:grid;place-items:center;font-size:18px;margin-right:12px}
+.ex-code{background:#f7f9fc;border-left:3px solid var(--brand-red);border-radius:8px;padding:10px 14px;margin-top:8px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.84rem;color:#33404f}
+
+/* spot the phish */
+.email-meta{font-size:.9rem;color:#33404f}
+.email-meta .k{color:#5b6676;min-width:62px;font-weight:600;display:inline-block}
+/* every clickable part looks the same until found, so styling doesn't reveal the answers */
+.pick{cursor:pointer;border-radius:3px;padding:0 2px}
+.pick:hover{background:#eef2f8}
+.pick:focus-visible{outline:2px solid var(--brand-teal-d);outline-offset:2px}
+.pick.found{background:#d9f2e5;border-bottom:2px solid var(--brand-green)}
+.pick.found::after{content:" ✓";color:var(--brand-green);font-weight:700}
+.nav-tabs .nav-link{font-weight:700;color:#5b6676}
+.nav-tabs .nav-link.active{color:var(--brand-navy)}
+.finding.hit{border-color:var(--brand-green)!important;background:#eefaf3}
+.finding.hit b{color:var(--brand-navy)}
+
+/* password */
+.pp-out{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.25rem;font-weight:700;color:var(--brand-navy);
+  background:#f1f6fb;border:1px dashed var(--brand-teal);border-radius:12px;padding:16px;text-align:center;word-break:break-all}
+.mono-input{font-family:ui-monospace,Menlo,Consolas,monospace}
+
+/* mfa */
+.mfa-card{cursor:pointer;transition:transform .1s}
+.mfa-card:hover{transform:translateY(-3px)}
+.mfa-card:focus-visible{outline:2px solid var(--brand-teal-d);outline-offset:2px}
+.mfa-card .big{font-size:30px}
+
+/* report */
+.report-band{background:linear-gradient(135deg,#17352f,#1f7d72);color:#eafaf6}
+.step-num{width:28px;height:28px;background:var(--brand-navy);color:#fff;border-radius:8px;display:grid;place-items:center;font-weight:800;flex:0 0 auto}
+
+/* quiz */
+.opt{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid #e3e8f0;border-radius:10px;margin-bottom:8px;cursor:pointer}
+.opt:hover{border-color:var(--brand-teal);background:#f6fbfa}
+.opt.correct{border-color:var(--brand-green);background:#eefaf3}
+.opt.wrong{border-color:var(--brand-red);background:#fbe9e5}
+fieldset.q{border:0;padding:0;min-width:0}
+.fb{font-size:.88rem;margin-top:6px}
+.fb.ok{color:#1e6e46}.fb.no{color:#a8402b}
+
+footer{background:var(--brand-navy);color:#aebbce}
+footer b{color:#fff}
+
+/* layout helpers (replace former inline styles) */
+html{scroll-padding-top:76px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.skip-link{position:absolute;z-index:2000;left:8px;top:8px;background:#fff;padding:8px 12px;border-radius:6px}
+.eyebrow-dark{background:rgba(255,255,255,.12);color:#bfeee6}
+.hero-lead{color:#c3cede;max-width:56ch}
+.hero-note{color:#8ea0bb}
+.hero-note a{text-decoration:underline}
+.report-lead{color:#d8f3ee}
+.footer-lead{max-width:60ch;color:#c9d4e4}
+.footer-note{color:#8595ad}
+.progress-sm{height:8px}
+.progress-md{height:12px}
+#cBar,#pwMeter{width:0}
